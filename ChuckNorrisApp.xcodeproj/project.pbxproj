@@ -13,6 +13,8 @@
 		C1914FCD204DBF96004AFDAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1914FCC204DBF96004AFDAC /* Assets.xcassets */; };
 		C1914FD0204DBF96004AFDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1914FCE204DBF96004AFDAC /* LaunchScreen.storyboard */; };
 		C1914FD3204DBF96004AFDAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1914FD2204DBF96004AFDAC /* main.m */; };
+		C1914FDB204DC2EE004AFDAC /* SpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1914FDA204DC2EE004AFDAC /* SpaceCell.m */; };
+		C1ED99B42051F136001A2EAE /* hard_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1ED99B32051F136001A2EAE /* hard_times.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		C1914FCF204DBF96004AFDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1914FD1204DBF96004AFDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1914FD2204DBF96004AFDAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1914FD9204DC2EE004AFDAC /* SpaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceCell.h; sourceTree = "<group>"; };
+		C1914FDA204DC2EE004AFDAC /* SpaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceCell.m; sourceTree = "<group>"; };
+		C1ED99B32051F136001A2EAE /* hard_times.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hard_times.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +67,10 @@
 				C1914FC4204DBF96004AFDAC /* AppDelegate.m */,
 				C1914FC6204DBF96004AFDAC /* ViewController.h */,
 				C1914FC7204DBF96004AFDAC /* ViewController.m */,
+				C1ED99B32051F136001A2EAE /* hard_times.txt */,
 				C1914FC9204DBF96004AFDAC /* Main.storyboard */,
+				C1914FD9204DC2EE004AFDAC /* SpaceCell.h */,
+				C1914FDA204DC2EE004AFDAC /* SpaceCell.m */,
 				C1914FCC204DBF96004AFDAC /* Assets.xcassets */,
 				C1914FCE204DBF96004AFDAC /* LaunchScreen.storyboard */,
 				C1914FD1204DBF96004AFDAC /* Info.plist */,
@@ -129,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1ED99B42051F136001A2EAE /* hard_times.txt in Resources */,
 				C1914FD0204DBF96004AFDAC /* LaunchScreen.storyboard in Resources */,
 				C1914FCD204DBF96004AFDAC /* Assets.xcassets in Resources */,
 				C1914FCB204DBF96004AFDAC /* Main.storyboard in Resources */,
@@ -144,6 +153,7 @@
 			files = (
 				C1914FC8204DBF96004AFDAC /* ViewController.m in Sources */,
 				C1914FD3204DBF96004AFDAC /* main.m in Sources */,
+				C1914FDB204DC2EE004AFDAC /* SpaceCell.m in Sources */,
 				C1914FC5204DBF96004AFDAC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

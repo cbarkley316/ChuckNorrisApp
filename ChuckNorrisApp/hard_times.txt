@@ -1,0 +1,11 @@
+Camden's struggles in making the "Chuck Norris" app:
+
+- I had no trouble following a tutorial teaching me to make and disply a simple grided list with hard-coded data.
+- I struggled to find out how to read the ICNDB JSON file and have THAT be my data.
+    - Per the tutorial I was watching I was trying to read the contents of the "value" key as an NSSting.
+    - But what took me a day to realize was that the content of the "value" key was another dictionary. (a dictionary within a dictionary). So I redefined my variable and was then able to access the "joke" key.
+- I struggled the longest (3-4 days) on trying to get the cells to be big enough to fit the jokes.
+    -I tried for a while to write code that would automatically adjust the height of the tableview cells but each tutorial said to set the contraints first. It took me a long time to learn that the settings for the cell's constraints were in Interface Builder.
+    -Once I figured that out, for some reason it wasn't allowing me to set the constraints. So I found another tableview tutorial and started over.
+    -I was then able to set the constraints of the cells but I couldn't figure out how to auto adjust the height.
+    -So I did some trial and error with Interface Builder and set all 3 cells to be equally as large and display the entire text within each cell.

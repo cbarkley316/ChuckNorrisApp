@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SpaceCell.h
 //  ChuckNorrisApp
 //
 //  Created by Catherine Kreamer on 3/5/18.
@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SpaceCell.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-{
-    
-}
+@interface SpaceCell : UITableViewCell
 
+@property (nonnull, strong) IBOutlet UILabel *jokeLbl;
 
+- (void)updateCellWithJoke:(nonnull NSString *)joke;
 
 @end
-
