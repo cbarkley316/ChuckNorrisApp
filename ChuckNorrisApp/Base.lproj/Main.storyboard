@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueExtras.ttc">
+            <string>HelveticaNeue-CondensedBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,48 +23,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b0R-8R-sQH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0j-mL-cuy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spaceCell" rowHeight="213" id="8ep-CP-Myg" customClass="SpaceCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="213"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spaceCell" rowHeight="187" id="GKk-Pp-6Dn" customClass="SpaceCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ep-CP-Myg" id="5Ut-bh-VaY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="212.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GKk-Pp-6Dn" id="NWi-SV-f2z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" semanticContentAttribute="forceLeftToRight" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" text="The joke will go here, even if it is long...way too long!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-D2-yLN">
-                                                    <rect key="frame" x="15" y="11" width="345" height="211"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The joke will go here. Even if it is really long. It could be so long that it wraps around" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcU-Rb-Sa1">
+                                                    <rect key="frame" x="15" y="11" width="318" height="163.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <size key="shadowOffset" width="-1" height="-1"/>
-                                                    <variation key="heightClass=regular-widthClass=regular" layoutMarginsFollowReadableWidth="YES"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vcU-Rb-Sa1" firstAttribute="leading" secondItem="NWi-SV-f2z" secondAttribute="leading" constant="15" id="Bs8-LP-RLc"/>
+                                                <constraint firstAttribute="bottom" secondItem="vcU-Rb-Sa1" secondAttribute="bottom" constant="12" id="MYK-19-6OA"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vcU-Rb-Sa1" secondAttribute="trailing" constant="20" symbolic="YES" id="Ty1-75-hbe"/>
+                                                <constraint firstItem="vcU-Rb-Sa1" firstAttribute="top" secondItem="NWi-SV-f2z" secondAttribute="top" constant="11" id="qKz-ql-scp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="jokeLbl" destination="IV1-D2-yLN" id="Sdq-Hm-MyD"/>
+                                            <outlet property="jokeLbl" destination="vcU-Rb-Sa1" id="0aa-WO-zRS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Fm1-mk-kbF"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="H8a-7c-oCZ"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vqu-l8-4D2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ToY-hw-6eI"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-FG-WWw">
+                                <rect key="frame" x="230" y="0.0" width="129" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load Some Jokes"/>
+                                <connections>
+                                    <action selector="reloadTableData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPA-UX-aQK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="b0R-8R-sQH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CeD-db-Hdh"/>
-                            <constraint firstItem="b0R-8R-sQH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tkz-Bt-4OE"/>
-                            <constraint firstItem="b0R-8R-sQH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f7a-Tv-pwl"/>
-                            <constraint firstItem="b0R-8R-sQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xet-qr-shS"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableObject" destination="s0j-mL-cuy" id="DDg-IU-Lzb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

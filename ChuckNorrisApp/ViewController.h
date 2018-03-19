@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "SpaceCell.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLSessionDelegate, NSURLSessionDataDelegate>
 {
     
 }
+@property (strong, nonatomic) IBOutlet UITableView *tableObject;
 
+- (IBAction)reloadTableData:(UIButton *)sender;
 
 
 @end

@@ -10,6 +10,8 @@
 
 @implementation SpaceCell
 
+@synthesize jokeLbl;
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -19,8 +21,10 @@
     self.jokeLbl.text = joke;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)setSelected:(BOOL)selected
+           animated:(BOOL)animated {
+    [super setSelected:selected
+              animated:animated];
 
     // Configure the view for the selected state
 }
