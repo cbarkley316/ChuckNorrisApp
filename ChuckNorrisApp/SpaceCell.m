@@ -14,7 +14,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 -(void)updateCellWithJoke:(NSString *)joke{
@@ -26,7 +25,6 @@
     [super setSelected:selected
               animated:animated];
 
-    // Configure the view for the selected state
 }
 
 @end

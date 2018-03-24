@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SpaceCell.h"
+#import "NetworkManager.h"
+#import "SessionManager.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLSessionDelegate, NSURLSessionDataDelegate>
 {
-    
 }
-@property (strong, nonatomic) IBOutlet UITableView *tableObject;
 
-- (IBAction)reloadTableData:(UIButton *)sender;
-
+- (void)jokeReceiver:(NSMutableArray *)jokeArray;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10808722061C24B009346FA /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C10808712061C24B009346FA /* NetworkManager.m */; };
 		C1914FC5204DBF96004AFDAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1914FC4204DBF96004AFDAC /* AppDelegate.m */; };
 		C1914FC8204DBF96004AFDAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1914FC7204DBF96004AFDAC /* ViewController.m */; };
 		C1914FCB204DBF96004AFDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1914FC9204DBF96004AFDAC /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C10808702061C24B009346FA /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		C10808712061C24B009346FA /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		C1914FC0204DBF96004AFDAC /* ChuckNorrisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1914FC3204DBF96004AFDAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C1914FC4204DBF96004AFDAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				C1914FC4204DBF96004AFDAC /* AppDelegate.m */,
 				C1914FC6204DBF96004AFDAC /* ViewController.h */,
 				C1914FC7204DBF96004AFDAC /* ViewController.m */,
+				C10808702061C24B009346FA /* NetworkManager.h */,
+				C10808712061C24B009346FA /* NetworkManager.m */,
 				C1ED99B32051F136001A2EAE /* hard_times.txt */,
 				C1914FC9204DBF96004AFDAC /* Main.storyboard */,
 				C1914FD9204DC2EE004AFDAC /* SpaceCell.h */,
@@ -154,6 +159,7 @@
 				C1914FC8204DBF96004AFDAC /* ViewController.m in Sources */,
 				C1914FD3204DBF96004AFDAC /* main.m in Sources */,
 				C1914FDB204DC2EE004AFDAC /* SpaceCell.m in Sources */,
+				C10808722061C24B009346FA /* NetworkManager.m in Sources */,
 				C1914FC5204DBF96004AFDAC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
