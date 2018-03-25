@@ -74,7 +74,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="table" destination="s0j-mL-cuy" id="9DR-Eu-HGx"/>
+                        <outlet property="table" destination="s0j-mL-cuy" id="jv7-mA-qqF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

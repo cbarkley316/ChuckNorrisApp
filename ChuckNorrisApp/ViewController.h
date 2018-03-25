@@ -14,6 +14,9 @@
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLSessionDelegate, NSURLSessionDataDelegate>
 {
 }
+@property (strong, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) NSMutableArray *jokes;
+@property (strong, nonatomic) NSMutableArray *testArray;
 
 - (void)jokeReceiver:(NSMutableArray *)jokeArray;
 

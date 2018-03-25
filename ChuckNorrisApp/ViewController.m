@@ -6,16 +6,13 @@
 //  Copyright © 2018 Camden Barkley. All rights reserved.
 //
 
+
+/////TO DO: clean up code. Upload to github.
 #import "ViewController.h"
 #import "SpaceCell.h"
 #import "NetworkManager.h"
 
 @interface ViewController ()
-
-
-@property (strong, nonatomic) NSMutableArray *jokes;
-@property (strong, nonatomic) NSMutableArray *testArray;
-@property (strong, nonatomic) IBOutlet UITableView *table;
 
 @end
 
@@ -27,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NetworkManager *networkManager = [[NetworkManager alloc] init];
+    [networkManager setHolder:self];
     [networkManager downloadDataFromURL];
 //    testArray = [[NSMutableArray alloc] initWithObjects:@"Hi", @"Hello", @"Greetings", nil];
 //    [self jokeReceiver:testArray];
@@ -34,13 +32,12 @@
 }
 
 - (void)jokeReceiver:(NSMutableArray *)jokeArray{
-    //SEL reloadSelector = @selector(reloadData);
     SEL reloadSelector = NSSelectorFromString(@"reloadData");
-        jokes = jokeArray;
-        NSLog(@"Joke receiver: %@", jokes);
-        [table performSelectorOnMainThread:reloadSelector
-                                withObject:nil
-                             waitUntilDone:YES];
+    jokes = jokeArray;
+    NSLog(@"Joke receiver: %@", jokes);
+    [table performSelectorOnMainThread:reloadSelector
+                            withObject:nil
+                         waitUntilDone:YES];
 }
 
 #pragma mark - table view stuff

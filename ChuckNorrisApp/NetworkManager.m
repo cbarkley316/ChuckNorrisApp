@@ -7,6 +7,7 @@
 //
 
 #import "NetworkManager.h"
+#import "ViewController.h"
 
 @interface NetworkManager ()
 
@@ -14,10 +15,10 @@
 
 @implementation NetworkManager
 
-@synthesize downloadedJSON;
+@synthesize downloadedJSON, holder;
 
 -(void)downloadDataFromURL{
-    NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random/3"];
+    NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random/10"];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *downloadJsonTask = [session dataTaskWithURL:url
                                                     completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -35,8 +36,7 @@
                             _jokes addObject:[NSMutableString stringWithFormat:@"%@", item[@"joke"]]
                             ];
     NSLog(@"_jokes array has %d jokes in it.", (short)_jokes.count);
-    ViewController *vc = [[ViewController alloc] init];
-    [vc jokeReceiver:_jokes];
+    [holder jokeReceiver:_jokes];    
 }
 
 @end
