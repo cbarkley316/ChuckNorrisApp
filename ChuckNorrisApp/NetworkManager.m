@@ -15,7 +15,7 @@
 
 @implementation NetworkManager
 
-@synthesize downloadedJSON, holder;
+@synthesize holder;
 
 -(void)downloadDataFromURL{
     NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random/10"];
@@ -35,7 +35,6 @@
     for (id item in jValue)[
                             _jokes addObject:[NSMutableString stringWithFormat:@"%@", item[@"joke"]]
                             ];
-    NSLog(@"_jokes array has %d jokes in it.", (short)_jokes.count);
     [holder jokeReceiver:_jokes];    
 }
 

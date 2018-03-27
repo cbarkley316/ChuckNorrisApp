@@ -11,9 +11,7 @@
 
 @interface NetworkManager : UIViewController
 
-@property (strong, nonatomic) NSData *downloadedJSON;
 @property (strong, nonatomic) ViewController *holder;
-
 
 -(void)downloadDataFromURL;
 -(void)pullFromICNDBJSON:(NSData *)data;

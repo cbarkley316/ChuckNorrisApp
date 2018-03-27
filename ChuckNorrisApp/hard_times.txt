@@ -9,3 +9,9 @@ Camden's struggles in making the "Chuck Norris" app:
     -Once I figured that out, for some reason it wasn't allowing me to set the constraints. So I found another tableview tutorial and started over.
     -I was then able to set the constraints of the cells but I couldn't figure out how to auto adjust the height.
     -So I did some trial and error with Interface Builder and set all 3 cells to be equally as large and display the entire text within each cell.
+
+3/27 Commit/Push
+
+- Jame's email was vey helpful. Him telling me that I was creating a brand new view controller reminded me about something very fundamental that I had forgotten. When I am not working with classes, I am working with instances of classes.
+    - I fixed this issue by using a solution in the BNR Objective C book. I created a "holder" property to hold the view controller instance. Then when the network manager obtained it's information I could pass it to that holder.
+- I then ran into very few issues adding background color and autosizing cells.

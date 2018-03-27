@@ -6,12 +6,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="HelveticaNeueExtras.ttc">
             <string>HelveticaNeue-CondensedBold</string>
+        </array>
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s0j-mL-cuy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -36,7 +40,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The joke will go here. Even if it is really long. It could be so long that it wraps around" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcU-Rb-Sa1">
-                                                    <rect key="frame" x="15" y="11" width="318" height="163.5"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="164"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -45,8 +49,8 @@
                                             <constraints>
                                                 <constraint firstItem="vcU-Rb-Sa1" firstAttribute="leading" secondItem="NWi-SV-f2z" secondAttribute="leading" constant="15" id="Bs8-LP-RLc"/>
                                                 <constraint firstAttribute="bottom" secondItem="vcU-Rb-Sa1" secondAttribute="bottom" constant="12" id="MYK-19-6OA"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vcU-Rb-Sa1" secondAttribute="trailing" constant="20" symbolic="YES" id="Ty1-75-hbe"/>
                                                 <constraint firstItem="vcU-Rb-Sa1" firstAttribute="top" secondItem="NWi-SV-f2z" secondAttribute="top" constant="11" id="qKz-ql-scp"/>
+                                                <constraint firstItem="vcU-Rb-Sa1" firstAttribute="trailing" secondItem="NWi-SV-f2z" secondAttribute="trailingMargin" id="uzg-nW-Ykk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -59,14 +63,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ToY-hw-6eI"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYo-FG-WWw">
-                                <rect key="frame" x="230" y="0.0" width="129" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chuck Norris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyR-8z-Z2z">
+                                <rect key="frame" x="16" y="33" width="343" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Load Some Jokes"/>
-                                <connections>
-                                    <action selector="reloadTableData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wPA-UX-aQK"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

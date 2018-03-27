@@ -11,12 +11,11 @@
 #import "NetworkManager.h"
 #import "SessionManager.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSURLSessionDelegate, NSURLSessionDataDelegate>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
 }
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSMutableArray *jokes;
-@property (strong, nonatomic) NSMutableArray *testArray;
 
 - (void)jokeReceiver:(NSMutableArray *)jokeArray;
 

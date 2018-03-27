@@ -6,8 +6,6 @@
 //  Copyright © 2018 Camden Barkley. All rights reserved.
 //
 
-
-/////TO DO: clean up code. Upload to github.
 #import "ViewController.h"
 #import "SpaceCell.h"
 #import "NetworkManager.h"
@@ -18,7 +16,7 @@
 
 @implementation ViewController
 
-@synthesize jokes, table, testArray;
+@synthesize jokes, table;
 
 
 - (void)viewDidLoad {
@@ -26,9 +24,8 @@
     NetworkManager *networkManager = [[NetworkManager alloc] init];
     [networkManager setHolder:self];
     [networkManager downloadDataFromURL];
-//    testArray = [[NSMutableArray alloc] initWithObjects:@"Hi", @"Hello", @"Greetings", nil];
-//    [self jokeReceiver:testArray];
-
+    table.rowHeight = UITableViewAutomaticDimension;
+    table.estimatedRowHeight = 44.0;
 }
 
 - (void)jokeReceiver:(NSMutableArray *)jokeArray{
@@ -52,8 +49,12 @@
     SpaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"spaceCell"
                                                       forIndexPath:indexPath];
     [cell updateCellWithJoke:[jokes objectAtIndex:indexPath.row]];
-  
+    if( [indexPath row] % 2)
+        [cell setBackgroundColor:[UIColor whiteColor]];
+    else
+        [cell setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.1]];
     return cell;
 }
+
 
 @end
