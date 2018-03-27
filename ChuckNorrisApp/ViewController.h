@@ -10,12 +10,14 @@
 #import "SpaceCell.h"
 #import "NetworkManager.h"
 #import "SessionManager.h"
+@class NetworkManager;
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
 }
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSMutableArray *jokes;
+@property (strong, nonatomic) NetworkManager *networkManager;
 
 - (void)jokeReceiver:(NSMutableArray *)jokeArray;
 

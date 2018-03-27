@@ -17,6 +17,7 @@
 
 @synthesize holder;
 
+
 -(void)downloadDataFromURL{
     NSURL *url = [NSURL URLWithString:@"http://api.icndb.com/jokes/random/10"];
     NSURLSession *session = [NSURLSession sharedSession];

@@ -16,12 +16,12 @@
 
 @implementation ViewController
 
-@synthesize jokes, table;
+@synthesize jokes, table, networkManager;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NetworkManager *networkManager = [[NetworkManager alloc] init];
+    networkManager = [[NetworkManager alloc] init];
     [networkManager setHolder:self];
     [networkManager downloadDataFromURL];
     table.rowHeight = UITableViewAutomaticDimension;
@@ -36,6 +36,12 @@
                             withObject:nil
                          waitUntilDone:YES];
 }
+
+- (IBAction)moreJokes {
+    NSLog(@"More Jokes!");
+    [networkManager downloadDataFromURL];
+}
+
 
 #pragma mark - table view stuff
 
