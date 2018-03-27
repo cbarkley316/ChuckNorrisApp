@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SpaceCell.h"
 #import "NetworkManager.h"
-#import "SessionManager.h"
 @class NetworkManager;
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
