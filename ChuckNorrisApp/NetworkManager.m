@@ -34,7 +34,7 @@
                                                                                      options:0
                                                                                        error:nil];
                                 NSMutableArray *_jokes = [NSMutableArray array];
-                                //isolate the 'value' part of the dictionary
+                                //isolate the 'value' key of the dictionary
                                 NSDictionary *jValue = [json valueForKey:@"value"];
                                 //for each item in the dictionary, pull out the 'joke' part
                                 for (id item in jValue)[
