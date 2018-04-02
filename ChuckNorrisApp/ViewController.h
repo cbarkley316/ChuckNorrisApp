@@ -7,18 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SpaceCell.h"
-#import "NetworkManager.h"
-@class NetworkManager;
+
+//Any class that follows this protocol can be ViewController's delegate
+@protocol getStrings <NSObject>
+@required
+
+- (void)downloadSomeStrings;
+- (void)setHolder:(id)sender;
+
+@end
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
 }
+@property (strong) id <getStrings>delegate;
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSMutableArray *jokes;
-@property (strong, nonatomic) NetworkManager *networkManager;
 
-- (void)jokeReceiver:(NSMutableArray *)jokeArray;
 
 @end
 

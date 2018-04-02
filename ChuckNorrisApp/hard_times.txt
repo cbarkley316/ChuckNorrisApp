@@ -15,3 +15,8 @@ Camden's struggles in making the "Chuck Norris" app:
 - Jame's email was vey helpful. Him telling me that I was creating a brand new view controller reminded me about something very fundamental that I had forgotten. When I am not working with classes, I am working with instances of classes.
     - I fixed this issue by using a solution in the BNR Objective C book. I created a "holder" property to hold the view controller instance. Then when the network manager obtained it's information I could pass it to that holder.
 - I then ran into very few issues adding background color and autosizing cells.
+
+4/2 Commit/Push
+
+- James said to learn more about delegates and protocols. So i spent several (about 6) hours in the book and online learning about them until I understood how they work. Now I undertand them enough to use them in this app. By implementing a protocol and a delegate I eliminated a bad retain cycle I previously had in my code.
+- James also said to comment more so I did.

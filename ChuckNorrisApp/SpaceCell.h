@@ -10,6 +10,7 @@
 
 @interface SpaceCell : UITableViewCell
 
+//link my Interface Builder UILabel with this variable
 @property (nonnull, strong) IBOutlet UILabel *jokeLbl;
 
 - (void)updateCellWithJoke:(nonnull NSString *)joke;

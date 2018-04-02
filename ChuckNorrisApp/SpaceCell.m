@@ -16,6 +16,7 @@
     [super awakeFromNib];
 }
 
+//Put the joke where it's supposed to go
 -(void)updateCellWithJoke:(NSString *)joke{
     self.jokeLbl.text = joke;
 }
