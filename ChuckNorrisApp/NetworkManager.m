@@ -29,7 +29,7 @@
     //create a download task and when it has it's info run the code in the attatched block
     NSURLSessionDataTask *downloadJsonTask = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                                 //run this code when it downloads
-                                //convert the downloaded data into a dictionary
+                                //convert the downloaded json file into a dictionary
                                 NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
                                                                                      options:0
                                                                                        error:nil];
