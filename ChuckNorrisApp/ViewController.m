@@ -34,6 +34,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadJokes];
+}
+
+- (void)loadJokes{
     NetworkManager *nm = [[NetworkManager alloc] init]; //create an instance of NetworkManager
     delegate = nm;//set it to be VC's delegate
     [delegate setHolder:self];//make sure the delegate holds on to this instanct of VC
@@ -43,7 +47,7 @@
 //button for more jokes
 - (IBAction)moreJokes {
     NSLog(@"More Jokes!");
-    [delegate downloadSomeStrings];
+    [self loadJokes];
 }
 
 

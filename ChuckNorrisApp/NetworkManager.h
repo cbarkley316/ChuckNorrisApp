@@ -10,7 +10,7 @@
 
 @interface NetworkManager : UIViewController <getStrings>//follow the 'getStrings' protocol
 
-@property (strong, nonatomic) ViewController *holderObject;
+@property (weak) ViewController *holderObject;
 
 //methods from "getStrings" protocol
 - (void)downloadSomeStrings;

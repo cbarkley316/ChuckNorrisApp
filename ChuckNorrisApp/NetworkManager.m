@@ -47,6 +47,7 @@
                                 [holderObject.table performSelectorOnMainThread:reloadSelector
                                                                withObject:nil
                                                             waitUntilDone:YES];
+                                holderObject.delegate = nil;//dealocate the NM instance
                                                     }];
     //start the download task
     [downloadJsonTask resume];
