@@ -2,23 +2,10 @@
 //  ViewController.m
 //  ChuckNorrisApp
 //
-//  Created by Catherine Kreamer on 3/5/18.
+//  Created by Camden Barkley on 3/5/18.
 //  Copyright © 2018 Camden Barkley. All rights reserved.
 //
 
-
-////PLAN TO USE PROTOCOLS & DELEGATES
-/*
- 1) ViewController will define a protocol named "getStrings"
- 2) VC will declare that "any object that adheres to the 'getString' protocol can be assigned as VC's delegate.
- 3) NetoworkManager will adhere to the "getStrings" protocol
- 4) ViewController will define NM as its delegate.
- 5) VC tells its delegate, (NM), to perform the 'giveMeStrings' method and give me what it returns.
- 6) NM performs the 'giveMeStrings' method which returns an array of strings.
- 7) VC uses the strings in the way it is already.
- 
- */
-/////END PLAN
 #import "ViewController.h"
 #import "SpaceCell.h"
 #import "NetworkManager.h"
@@ -35,12 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadJokes];
+    jokes = [[NSMutableArray alloc] initWithObjects:@"Loading Chuck Norris Jokes...", nil];
 }
 
 - (void)loadJokes{
-    NetworkManager *nm = [[NetworkManager alloc] init]; //create an instance of NetworkManager
-    delegate = nm;//set it to be VC's delegate
-    [delegate setHolder:self];//make sure the delegate holds on to this instanct of VC
+    if (delegate == nil){//If the delegate hasn't been assigned create an instance of NetworkManager...
+        NetworkManager *nm = [[NetworkManager alloc] init];
+        delegate = nm;//...and set it to be VC's delegate
+       }
+    [delegate setHolder:self];//make sure the delegate holds on to this instance of VC
     [delegate downloadSomeStrings];
 }
 
@@ -69,10 +59,7 @@
                                                       forIndexPath:indexPath];
     [cell updateCellWithJoke:[jokes objectAtIndex:indexPath.row]];
     //Color the rows
-    if( [indexPath row] % 2)
-        [cell setBackgroundColor:[UIColor whiteColor]];
-    else
-        [cell setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:.1]];
+     [cell setBackgroundColor:([indexPath row] % 2) ? [UIColor whiteColor] : [UIColor colorWithRed:0 green:0 blue:0 alpha:.1]];
     return cell;
 }
 
